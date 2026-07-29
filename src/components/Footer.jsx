@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="footer-links">
             <a href="https://www.linkedin.com/in/njdhsieh/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <span className="footer-sep">·</span>
-            <a href="https://github.com/njd0523" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://github.com/njdhsieh" target="_blank" rel="noopener noreferrer">GitHub</a>
             <span className="footer-sep">·</span>
             <span className="footer-location">Taiwan</span>
           </div>
