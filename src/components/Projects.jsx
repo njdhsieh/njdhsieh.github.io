@@ -44,7 +44,7 @@ const PROJECTS = [
     description:
       'Built Yahoo Global News from scratch — a high-traffic, personalized news product serving cross-region audiences. The project won the 2011 Yahoo Super Star Award. Led the project as Scrum Master and principal engineer.',
     highlights: ['2011 Yahoo Super Star Award', 'Built from scratch', 'Cross-region delivery'],
-    type: 'Full-Stack Engineering',
+    type: 'Frontend Engineering',
   },
   {
     title: 'KKStream B2B OTT Platform',
