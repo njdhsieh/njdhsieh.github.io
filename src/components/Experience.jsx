@@ -1,0 +1,147 @@
+import './Experience.css'
+
+const JOBS = [
+  {
+    company: 'Rhinoshield',
+    period: '2024 – 2026',
+    roles: [
+      {
+        title: 'Assistant Manager, Innovative Personalized Development',
+        period: 'Jun 2025 – Jan 2026',
+        bullets: [
+          'Led cross-functional team of 3 engineers + 1 UI/UX designer, owning the Ditto desktop platform roadmap end-to-end.',
+          'Drove architectural decisions and delivery excellence across engineering and design.',
+          'Led major tech refresh: migrated from deprecated Shopify APIs to an in-house Cart Sharing SDK, improving maintainability and UX.',
+        ],
+      },
+      {
+        title: 'Technical Project Manager, Strategy & Project Delivery',
+        period: 'Jun 2024 – Jun 2025',
+        bullets: [
+          'Analyzed and optimized system architecture for performance, scalability, and reliability.',
+          'Built the company\'s first automation testing framework (Playwright) from scratch — 40%+ coverage, accelerating QA cycles.',
+          'Improved checkout flows through log analysis and cross-team collaboration.',
+        ],
+      },
+    ],
+  },
+  {
+    company: 'Yahoo! Inc.',
+    period: '2018 – 2024',
+    roles: [
+      {
+        title: 'Senior Manager, International Media Engineering',
+        period: 'Aug 2021 – Jan 2024',
+        bullets: [
+          'Led a global engineering team responsible for 16 international Yahoo homepage versions; decommissioned 8 legacy editions.',
+          'Oversaw Olympic and Ukraine war special-page generation systems, plus new personalization/feed-injection platforms.',
+          'Right-sized team from 13 → 7 engineers while growing output; owned hiring, development, and performance reviews.',
+        ],
+      },
+      {
+        title: 'Manager, International Media Engineering',
+        period: 'Apr 2019 – Aug 2021',
+        bullets: [
+          'Managed two Scrum teams (13 developers, Taiwan & India) delivering international homepage features.',
+          'Progressed from 75% coding in 2020 to equal coding/management split in 2021.',
+          'Drove new platform initiatives: video hubs and unified Node.js/React services.',
+          'Established a cross-team frontend lead community.',
+        ],
+      },
+      {
+        title: 'Lead Engineer, International Home Engineering',
+        period: 'Oct 2018 – Apr 2019',
+        bullets: [
+          'Built engineering team from 4 → 8 members.',
+          'Revamped UK mobile homepage and scaled updates across 26 countries.',
+          'Delivered full international homepage modernization across 26 regions.',
+        ],
+      },
+    ],
+  },
+  {
+    company: 'KKCompany',
+    period: '2015 – 2018',
+    roles: [
+      {
+        title: 'Manager, Platform Development (KKStream)',
+        period: 'Apr 2017 – Aug 2018',
+        bullets: [
+          'Managed 11 developers across Web, iOS, Android, API, and QA.',
+          'Led stability improvements for Japanese OTT products and scalable B2B modules.',
+          'Recruited and scaled the engineering team to full capacity.',
+        ],
+      },
+      {
+        title: 'Senior Software Engineer → Staff Engineer',
+        period: 'Jan 2015 – Apr 2017',
+        bullets: [
+          'Built new web engineering team; introduced Agile methodology and engineering guild practices.',
+          'Developed Panasonic\'s smart TV web app with React.js, Flux, and ES6.',
+          'Led Japan OTT service launch and B2B video service platforms.',
+        ],
+      },
+    ],
+  },
+  {
+    company: 'Yahoo! Inc. (first stint)',
+    period: '2010 – 2015',
+    roles: [
+      {
+        title: 'Software Engineer → Senior Software Engineer',
+        period: 'Apr 2010 – Jan 2015',
+        bullets: [
+          'Built personalized homepage modules used across TW and HK with Node.js.',
+          'Built Yahoo Global News from scratch — won the 2011 Yahoo Super Star Award.',
+          'Served as Scrum Master; delivered cross-region election and high-traffic personalization features.',
+        ],
+      },
+    ],
+  },
+]
+
+export default function Experience() {
+  return (
+    <section id="experience" className="experience section">
+      <div className="container">
+        <div className="section-header">
+          <span className="section-label">Career</span>
+          <h2 className="section-title">Experience</h2>
+          <p className="section-desc">
+            From individual contributor to senior engineering leader across global tech companies.
+          </p>
+        </div>
+
+        <div className="timeline">
+          {JOBS.map((job, i) => (
+            <div key={i} className="timeline-company">
+              <div className="timeline-company-header">
+                <div className="timeline-dot" />
+                <div>
+                  <span className="timeline-company-name">{job.company}</span>
+                  <span className="timeline-company-period">{job.period}</span>
+                </div>
+              </div>
+
+              <div className="timeline-roles">
+                {job.roles.map((role, j) => (
+                  <div key={j} className="role-card">
+                    <div className="role-header">
+                      <h3 className="role-title">{role.title}</h3>
+                      <span className="role-period">{role.period}</span>
+                    </div>
+                    <ul className="role-bullets">
+                      {role.bullets.map((b, k) => (
+                        <li key={k}>{b}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}

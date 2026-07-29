@@ -1,0 +1,150 @@
+.experience {
+  padding: 80px 0;
+}
+
+.section-header {
+  margin-bottom: 56px;
+}
+
+.section-title {
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: var(--text-primary);
+  margin: 8px 0 12px;
+}
+
+.section-desc {
+  color: var(--text-secondary);
+  font-size: 17px;
+  max-width: 560px;
+}
+
+/* Timeline */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.timeline-company {
+  position: relative;
+}
+
+.timeline-company-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.timeline-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+  flex-shrink: 0;
+}
+
+.timeline-company-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.3px;
+  margin-right: 12px;
+}
+
+.timeline-company-period {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 500;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 3px 10px;
+  border-radius: 6px;
+}
+
+/* Roles */
+.timeline-roles {
+  margin-left: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-left: 1px solid var(--border);
+  padding-left: 28px;
+}
+
+.role-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.role-card:hover {
+  border-color: var(--accent-border);
+  transform: translateX(4px);
+}
+
+.role-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.role-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.2px;
+  line-height: 1.4;
+}
+
+.role-period {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 500;
+  white-space: nowrap;
+  margin-top: 2px;
+}
+
+.role-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.role-bullets li {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  padding-left: 16px;
+  position: relative;
+}
+
+.role-bullets li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 11px;
+  top: 3px;
+}
+
+@media (max-width: 640px) {
+  .timeline-roles {
+    margin-left: 12px;
+    padding-left: 18px;
+  }
+
+  .role-header {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
