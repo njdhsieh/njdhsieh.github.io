@@ -67,46 +67,47 @@ const TYPE_COLORS = {
 
 export default function Projects() {
   return (
-    <section id="projects" className="projects section">
+    <section id="projects" className="projects section" aria-labelledby="projects-heading">
       <div className="container">
         <div className="section-header">
-          <span className="section-label">Work</span>
-          <h2 className="section-title">Key Projects</h2>
+          <span className="section-label" aria-hidden="true">Work</span>
+          <h2 id="projects-heading" className="section-title">Key Projects</h2>
           <p className="section-desc">
             Selected initiatives across engineering leadership, platform architecture, and product delivery.
           </p>
         </div>
 
-        <div className="projects-grid">
+        <ul className="projects-grid" aria-label="Key projects">
           {PROJECTS.map((project, i) => (
-            <div key={i} className="project-card">
+            <li key={i} className="project-card">
               <div className="project-top">
                 <span
                   className="project-type"
                   style={{ color: TYPE_COLORS[project.type] || 'var(--accent)' }}
+                  aria-label={`Category: ${project.type}`}
                 >
                   {project.type}
                 </span>
-                <span className="project-company">{project.company}</span>
+                <span className="project-company" aria-label={`Company: ${project.company}`}>{project.company}</span>
               </div>
 
               <h3 className="project-title">{project.title}</h3>
               <p className="project-desc">{project.description}</p>
 
-              <div className="project-highlights">
+              <ul className="project-highlights" aria-label="Key highlights">
                 {project.highlights.map((h, j) => (
-                  <span key={j} className="highlight-tag">{h}</span>
+                  <li key={j} className="highlight-tag">{h}</li>
                 ))}
-              </div>
+              </ul>
 
-              <div className="project-tags">
+              <ul className="project-tags" aria-label="Technologies used">
                 {project.tags.map((tag, j) => (
-                  <span key={j} className="tech-tag">{tag}</span>
+                  <li key={j} className="tech-tag">{tag}</li>
                 ))}
-              </div>
-            </div>
+              </ul>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   )

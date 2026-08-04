@@ -17,15 +17,26 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  // Close menu on Escape key
+  useEffect(() => {
+    const onKey = (e) => { if (e.key === 'Escape') setMenuOpen(false) }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [])
+
   return (
-    <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+    <header className={`navbar ${scrolled ? 'scrolled' : ''}`} role="banner">
       <div className="navbar-inner">
-        <a href="#about" className="navbar-logo">
+        <a href="#about" className="navbar-logo" aria-label="Lucy Hsieh — back to top">
           Lucy Hsieh
-          <span className="navbar-dot" />
+          <span className="navbar-dot" aria-hidden="true" />
         </a>
 
-        <nav className={`navbar-links ${menuOpen ? 'open' : ''}`}>
+        <nav
+          id="main-nav"
+          className={`navbar-links ${menuOpen ? 'open' : ''}`}
+          aria-label="Main navigation"
+        >
           {NAV_LINKS.map(({ label, href }) => (
             <a key={href} href={href} onClick={() => setMenuOpen(false)}>
               {label}
@@ -35,6 +46,7 @@ export default function Navbar() {
             href="mailto:njdhsieh@gmail.com"
             className="navbar-cta"
             onClick={() => setMenuOpen(false)}
+            aria-label="Contact Lucy via email"
           >
             Contact
           </a>
@@ -43,9 +55,13 @@ export default function Navbar() {
         <button
           className={`navbar-burger ${menuOpen ? 'open' : ''}`}
           onClick={() => setMenuOpen(o => !o)}
-          aria-label="Toggle menu"
+          aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+          aria-expanded={menuOpen}
+          aria-controls="main-nav"
         >
-          <span /><span /><span />
+          <span aria-hidden="true" />
+          <span aria-hidden="true" />
+          <span aria-hidden="true" />
         </button>
       </div>
     </header>
