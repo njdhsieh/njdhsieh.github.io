@@ -22,13 +22,15 @@
   margin-bottom: 28px;
 }
 
-.about-badge::before {
+.about-badge::before,
+.about-badge-dot {
   content: '';
   width: 7px;
   height: 7px;
   border-radius: 50%;
   background: var(--green);
   animation: pulse 2s ease-in-out infinite;
+  flex-shrink: 0;
 }
 
 @keyframes pulse {

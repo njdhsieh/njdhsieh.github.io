@@ -102,45 +102,47 @@ const JOBS = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="experience section">
+    <section id="experience" className="experience section" aria-labelledby="experience-heading">
       <div className="container">
         <div className="section-header">
-          <span className="section-label">Career</span>
-          <h2 className="section-title">Experience</h2>
+          <span className="section-label" aria-hidden="true">Career</span>
+          <h2 id="experience-heading" className="section-title">Experience</h2>
           <p className="section-desc">
             From individual contributor to senior engineering leader across global tech companies.
           </p>
         </div>
 
-        <div className="timeline">
+        <ol className="timeline" aria-label="Work history">
           {JOBS.map((job, i) => (
-            <div key={i} className="timeline-company">
+            <li key={i} className="timeline-company">
               <div className="timeline-company-header">
-                <div className="timeline-dot" />
+                <div className="timeline-dot" aria-hidden="true" />
                 <div>
                   <span className="timeline-company-name">{job.company}</span>
-                  <span className="timeline-company-period">{job.period}</span>
+                  <span className="timeline-company-period">
+                    <span className="sr-only">, </span>{job.period}
+                  </span>
                 </div>
               </div>
 
               <div className="timeline-roles">
                 {job.roles.map((role, j) => (
-                  <div key={j} className="role-card">
+                  <article key={j} className="role-card">
                     <div className="role-header">
                       <h3 className="role-title">{role.title}</h3>
-                      <span className="role-period">{role.period}</span>
+                      <time className="role-period">{role.period}</time>
                     </div>
                     <ul className="role-bullets">
                       {role.bullets.map((b, k) => (
                         <li key={k}>{b}</li>
                       ))}
                     </ul>
-                  </div>
+                  </article>
                 ))}
               </div>
-            </div>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   )
