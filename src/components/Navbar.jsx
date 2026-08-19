@@ -1,15 +1,17 @@
 import { useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import './Navbar.css'
 
-const NAV_LINKS = [
-  { label: 'About', href: '#about' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Projects', href: '#projects' },
-]
-
 export default function Navbar() {
+  const { t, i18n } = useTranslation()
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+
+  const NAV_LINKS = [
+    { label: t('nav.about'),      href: '#about' },
+    { label: t('nav.experience'), href: '#experience' },
+    { label: t('nav.projects'),   href: '#projects' },
+  ]
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -17,12 +19,17 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // Close menu on Escape key
   useEffect(() => {
     const onKey = (e) => { if (e.key === 'Escape') setMenuOpen(false) }
     document.addEventListener('keydown', onKey)
     return () => document.removeEventListener('keydown', onKey)
   }, [])
+
+  const toggleLang = () => {
+    const next = i18n.language === 'en' ? 'zhTW' : 'en'
+    i18n.changeLanguage(next)
+    localStorage.setItem('lang', next)
+  }
 
   return (
     <header className={`navbar ${scrolled ? 'scrolled' : ''}`} role="banner">
@@ -32,24 +39,16 @@ export default function Navbar() {
           <span className="navbar-dot" aria-hidden="true" />
         </a>
 
-        <nav
-          id="main-nav"
-          className={`navbar-links ${menuOpen ? 'open' : ''}`}
-          aria-label="Main navigation"
-        >
+        <nav id="main-nav" className={`navbar-links ${menuOpen ? 'open' : ''}`} aria-label="Main navigation">
           {NAV_LINKS.map(({ label, href }) => (
-            <a key={href} href={href} onClick={() => setMenuOpen(false)}>
-              {label}
-            </a>
+            <a key={href} href={href} onClick={() => setMenuOpen(false)}>{label}</a>
           ))}
-          <a
-            href="mailto:njdhsieh@gmail.com"
-            className="navbar-cta"
-            onClick={() => setMenuOpen(false)}
-            aria-label="Contact Lucy via email"
-          >
-            Contact
+          <a href="mailto:njdhsieh@gmail.com" className="navbar-cta" onClick={() => setMenuOpen(false)} aria-label="Contact Lucy via email">
+            {t('nav.contact')}
           </a>
+          <button className="lang-toggle" onClick={toggleLang} aria-label="Switch language">
+            {i18n.language === 'en' ? '中文' : 'EN'}
+          </button>
         </nav>
 
         <button
@@ -59,9 +58,7 @@ export default function Navbar() {
           aria-expanded={menuOpen}
           aria-controls="main-nav"
         >
-          <span aria-hidden="true" />
-          <span aria-hidden="true" />
-          <span aria-hidden="true" />
+          <span aria-hidden="true" /><span aria-hidden="true" /><span aria-hidden="true" />
         </button>
       </div>
     </header>

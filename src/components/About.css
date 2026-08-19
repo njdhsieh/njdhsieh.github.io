@@ -22,7 +22,6 @@
   margin-bottom: 28px;
 }
 
-.about-badge::before,
 .about-badge-dot {
   content: '';
   width: 7px;

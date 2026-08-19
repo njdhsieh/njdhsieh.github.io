@@ -1,0 +1,184 @@
+{
+  "nav": {
+    "about": "關於我",
+    "experience": "工作經歷",
+    "projects": "專案",
+    "contact": "聯絡我"
+  },
+  "about": {
+    "badge": "歡迎職缺洽詢",
+    "title": "資深前端工程師 · 工程管理 · 技術專案管理",
+    "summary": "超過 15 年的工程卓越與大規模產品交付經驗，橫跨全球多個組織。我擅長打造高績效團隊、推動平台現代化，並將工程執行與商業策略緊密結合——從個人貢獻者成長為帶領工程師、設計師與 PM 的跨職能團隊領導者。",
+    "getInTouch": "聯絡我",
+    "viewExperience": "查看經歷",
+    "skillsHeading": "技術棧",
+    "highlights": [
+      { "value": "15+", "label": "年工程經驗" },
+      { "value": "3",   "label": "全球企業" },
+      { "value": "26",  "label": "產品上線國家數" },
+      { "value": "40%+","label": "從零建立的自動化覆蓋率" }
+    ]
+  },
+  "experience": {
+    "label": "職涯",
+    "title": "工作經歷",
+    "desc": "從個人貢獻者成長為資深工程領導，橫跨全球科技公司。",
+    "jobs": [
+      {
+        "company": "Rhinoshield 犀牛盾", "period": "2024 – 2026",
+        "roles": [
+          {
+            "title": "創新個人化開發副理",
+            "period": "2025/06 – 2026/01",
+            "bullets": [
+              "帶領跨職能團隊（3 位工程師 + 1 位 UI/UX 設計師），全責負責 Ditto 桌面平台的產品藍圖。",
+              "主導架構決策，確保工程與設計端的交付品質。",
+              "主導重大技術升級：將過時的 Shopify API 遷移至自研的 Cart Sharing SDK，提升系統可維護性與使用者體驗。"
+            ]
+          },
+          {
+            "title": "策略與專案交付技術專案經理",
+            "period": "2024/06 – 2025/06",
+            "bullets": [
+              "分析並優化系統架構，提升效能、擴展性與穩定性。",
+              "從零建立公司首個自動化測試框架（Playwright），達到 40%+ 覆蓋率，加速 QA 週期。",
+              "透過日誌分析與跨團隊協作改善結帳流程。"
+            ]
+          }
+        ]
+      },
+      {
+        "company": "Yahoo! Inc.", "period": "2018 – 2024",
+        "roles": [
+          {
+            "title": "國際媒體工程資深經理",
+            "period": "2021/08 – 2024/01",
+            "bullets": [
+              "帶領全球工程團隊，負責 16 個 Yahoo 國際首頁版本；下線 8 個舊版系統。",
+              "主導奧運與烏克蘭戰爭特輯頁面生成系統，並擴展個人化與 Feed 注入平台。",
+              "將團隊從 13 人精簡至 7 人同時維持產出；負責招募、人才培育與績效管理。"
+            ]
+          },
+          {
+            "title": "國際媒體工程經理",
+            "period": "2019/04 – 2021/08",
+            "bullets": [
+              "管理台灣與印度共 13 名工程師的兩支 Scrum 團隊，負責國際首頁功能開發。",
+              "2020 年 75% 寫程式 / 2021 年演進為工程與管理各半。",
+              "推動新平台計畫：影音 Hub 與統一 Node.js/React 服務。",
+              "建立跨團隊前端 Lead 社群。"
+            ]
+          },
+          {
+            "title": "國際首頁工程技術主管",
+            "period": "2018/10 – 2019/04",
+            "bullets": [
+              "將工程團隊從 4 人擴編至 8 人。",
+              "改版英國行動版首頁，並推廣至 26 個國家。",
+              "完成 26 個地區的首頁全面現代化。"
+            ]
+          }
+        ]
+      },
+      {
+        "company": "KKCompany", "period": "2015 – 2018",
+        "roles": [
+          {
+            "title": "KKStream 平台開發經理",
+            "period": "2017/04 – 2018/08",
+            "bullets": [
+              "管理 Web、iOS、Android、API 與 QA 共 11 名工程師。",
+              "主導日本 OTT 產品穩定性改善與可擴展 B2B 模組開發。",
+              "招募並擴編工程團隊至滿編狀態。"
+            ]
+          },
+          {
+            "title": "Staff 工程師 → 資深軟體工程師",
+            "period": "2015/01 – 2017/04",
+            "bullets": [
+              "建立新的 Web 工程團隊；導入敏捷方法論與工程公會制度。",
+              "使用 React.js、Flux 與 ES6 開發 Panasonic 智慧電視 Web App。",
+              "主導日本 OTT 服務上線與 B2B 影音服務平台開發。"
+            ]
+          }
+        ]
+      },
+      {
+        "company": "Yahoo! Inc.（第一段）", "period": "2010 – 2015",
+        "roles": [
+          {
+            "title": "軟體工程師 → 資深軟體工程師",
+            "period": "2010/04 – 2015/01",
+            "bullets": [
+              "以 Node.js 開發台灣與香港個人化首頁模組。",
+              "從零打造 Yahoo 全球新聞——榮獲 2011 年 Yahoo 超級明星獎。",
+              "擔任 Scrum Master；交付跨地區選舉與高流量個人化功能。"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "label": "作品",
+    "title": "重點專案",
+    "desc": "橫跨工程領導、平台架構與產品交付的精選成果。",
+    "categoryLabel": "類別",
+    "companyLabel": "公司",
+    "highlightsLabel": "重點成果",
+    "techLabel": "使用技術",
+    "items": [
+      {
+        "title": "Yahoo 國際首頁平台",
+        "company": "Yahoo! Inc.",
+        "tags": ["Node.js", "React", "PHP", "團隊領導"],
+        "description": "帶領 26 個國家、16 個 Yahoo 國際首頁版本的工程開發。主導技術升級——將舊版 PHP 系統遷移至統一 Node.js/React 架構，下線 8 個舊版本，全程維持零停機交付。",
+        "highlights": ["26 個國家", "PHP → Node.js 遷移", "奧運與烏克蘭戰爭特輯"],
+        "type": "平台工程"
+      },
+      {
+        "title": "Playwright 自動化測試框架",
+        "company": "Rhinoshield 犀牛盾",
+        "tags": ["Playwright", "測試", "CI/CD", "QA 自動化"],
+        "description": "從零建立犀牛盾首個端到端自動化測試框架。達成 40%+ 回歸測試覆蓋率，大幅加速新產品與裝置上市的 QA 週期。",
+        "highlights": ["40%+ 覆蓋率", "從無到有", "加速 QA 週期"],
+        "type": "工程基礎建設"
+      },
+      {
+        "title": "Ditto 桌面個人化平台",
+        "company": "Rhinoshield 犀牛盾",
+        "tags": ["產品領導", "Shopify API", "SDK", "UI/UX"],
+        "description": "負責 Ditto 個人化桌面平台的產品與工程。主導重大技術升級，以自研 Cart Sharing SDK 取代過時的 Shopify API，提升系統擴展性與使用者體驗。",
+        "highlights": ["Cart Sharing SDK", "Shopify API 遷移", "4 人跨職能團隊"],
+        "type": "產品與工程"
+      },
+      {
+        "title": "Panasonic 智慧電視 Web App",
+        "company": "KKCompany",
+        "tags": ["React.js", "Flux", "ES6", "智慧電視"],
+        "description": "在 KKStream 使用 React.js、Flux 與 ES6 開發 Panasonic 智慧電視 Web 應用程式，是台灣消費電子領域早期導入 React 的實際案例之一。",
+        "highlights": ["React + Flux", "智慧電視平台", "台灣早期 React 採用者"],
+        "type": "前端工程"
+      },
+      {
+        "title": "Yahoo 全球新聞",
+        "company": "Yahoo! Inc.",
+        "tags": ["Node.js", "PHP", "個人化", "Scrum"],
+        "description": "從零打造 Yahoo 全球新聞——高流量個人化新聞產品，服務跨地區受眾。榮獲 2011 年 Yahoo 超級明星獎。擔任 Scrum Master 與主要工程師。",
+        "highlights": ["2011 Yahoo 超級明星獎", "從零建立", "跨地區交付"],
+        "type": "全端工程"
+      },
+      {
+        "title": "KKStream B2B OTT 平台",
+        "company": "KKCompany",
+        "tags": ["PHP (Laravel)", "Angular.js", "B2B", "日本 OTT"],
+        "description": "主導日本 OTT 服務上線與 B2B 影音服務平台開發。管理 Web、iOS、Android、API 與 QA 共 11 名工程師，建立跨平台健康公會系統。",
+        "highlights": ["日本 OTT 上線", "11 人團隊", "多平台交付"],
+        "type": "平台工程"
+      }
+    ]
+  },
+  "footer": {
+    "built": "使用 React + Vite 建置"
+  }
+}
