@@ -1,6 +1,8 @@
+import { useTranslation } from 'react-i18next'
 import './Footer.css'
 
 export default function Footer() {
+  const { t } = useTranslation()
   return (
     <footer className="footer">
       <div className="container">
@@ -14,7 +16,7 @@ export default function Footer() {
             <span className="footer-location">Taiwan</span>
           </div>
           <span className="footer-copy">
-            © {new Date().getFullYear()} · Built with React + Vite
+            © {new Date().getFullYear()} · {t('footer.built')}
           </span>
         </div>
       </div>
