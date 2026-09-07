@@ -2,8 +2,9 @@ import { useTranslation } from 'react-i18next'
 import './About.css'
 
 const SKILLS = [
-  'JavaScript (ES6+)', 'Node.js', 'React.js', 'Vue.js', 'Angular.js',
-  'PHP', 'HTML/CSS', 'AWS', 'Docker', 'Git', 'Webpack', 'Playwright',
+  'JavaScript (ES6+)', 'TypeScript', 'Node.js', 'React.js', 'Next.js', 'Vue.js', 'Angular.js', 'GraphQL', 'REST', 'HTML5', 'CSS3',
+  'Redux', 'PHP', 'AWS', 'Docker', 'CI/CD', 'Git', 'Playwright',
+  'OpenAI Responses API', 'GitHub Copilot', 'Claude', 'Cursor',
 ]
 
 export default function About() {
